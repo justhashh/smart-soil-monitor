@@ -37,6 +37,14 @@ void loop()
     {
         Serial.println("WATER IS LESS IG");
     }
-
+    if (soilm > 800)
+    {
+    digitalWrite(led, HIGH);
+    Serial.println("SOIL IS DRY - WATER NEEDED");
+    }
+    else
+    {
+    digitalWrite(led, LOW);
+    }
     delay(1000);
-}
+    }
